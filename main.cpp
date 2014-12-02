@@ -1,5 +1,7 @@
+#include <SDL2/SDL.h>
+#include <SDL2/SDL2_gfxPrimitives.h>
 
-//http://wiki.libsdl.org/APIByCategory
+#include <iostream>	
 
 int main() {
 
@@ -23,6 +25,10 @@ int main() {
 		return 1;
 	}
 
+	SDL_Surface *background = SDL_LoadBMP("smiley.bmp");
+	SDL_Texture *tex = SDL_CreateTextureFromSurface(ren, background);
+	SDL_FreeSurface(background);
+
 	bool running = true;
 
 	while (running) {
@@ -30,10 +36,12 @@ int main() {
 		while(SDL_PollEvent(&ev) != 0) {
 			if(ev.type == SDL_QUIT) running = false;
 		}
+
 		SDL_RenderClear(ren);
 
+		SDL_RenderCopy(ren, tex, NULL, NULL);
 		roundedBoxColor(ren, 40, 40, 240, 240, 10, 0xFABCA0FF);
-		
+
 		SDL_RenderPresent(ren);
 		SDL_Delay(2000);
 	}
