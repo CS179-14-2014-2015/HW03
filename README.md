@@ -13,6 +13,7 @@ The program needs modifications to run (in particular, the `#include`s)
 After getting it to run, you may add more stuff to it.
 
 ---
+HOW TO MAKE MAIN.CPP COMPILE IN WINDOWS VISUAL STUDIO 2010:
 
 1. Download SDL2-devel-2.0.3-VC.zip in the development library section in http://libsdl.org/download-2.0.php
 
@@ -20,9 +21,9 @@ After getting it to run, you may add more stuff to it.
 
 3. Download SDL2_gfx-1.0.1.tar.gz in http://cms.ferzkopp.net/index.php/software/13-sdl-gfx
 
-4. Extract the file into the computer
+4. Extract the file into the computer.
 
-5. Create an empty project in Visual Studios (any name can do)
+5. Create an empty project in Visual Studios (any name can do).
 
 6. Download the main.cpp for the homework.
 
