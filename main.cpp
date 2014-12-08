@@ -1,7 +1,12 @@
+#include <iostream>
+#include <SDL.h>
+#include <SDL2_gfxPrimitives.h>
+
+
 
 //http://wiki.libsdl.org/APIByCategory
 
-int main() {
+int main(int argc, char* argv[]) {
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
 		std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
@@ -14,7 +19,7 @@ int main() {
 		SDL_Quit();
 		return 1;
 	}
-
+	
 	SDL_Renderer *ren = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 	if (ren == nullptr){
 		SDL_DestroyWindow(win);
@@ -31,14 +36,14 @@ int main() {
 			if(ev.type == SDL_QUIT) running = false;
 		}
 		SDL_RenderClear(ren);
-
+		
 		roundedBoxColor(ren, 40, 40, 240, 240, 10, 0xFABCA0FF);
 		
 		SDL_RenderPresent(ren);
 		SDL_Delay(2000);
 	}
 
-	SDL_DestroyTexture(tex);
+	//SDL_DestroyTexture(tex);
 	SDL_DestroyRenderer(ren);
 	SDL_DestroyWindow(win);
 	SDL_Quit();
