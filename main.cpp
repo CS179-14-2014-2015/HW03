@@ -1,6 +1,7 @@
 
-//http://wiki.libsdl.org/APIByCategory
-
+#include <SDL2/SDL.h>
+#include <iostream>
+#include "SDL2_gfxPrimitives.h"
 int main() {
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
@@ -33,12 +34,11 @@ int main() {
 		SDL_RenderClear(ren);
 
 		roundedBoxColor(ren, 40, 40, 240, 240, 10, 0xFABCA0FF);
-		
+
 		SDL_RenderPresent(ren);
 		SDL_Delay(2000);
 	}
 
-	SDL_DestroyTexture(tex);
 	SDL_DestroyRenderer(ren);
 	SDL_DestroyWindow(win);
 	SDL_Quit();
