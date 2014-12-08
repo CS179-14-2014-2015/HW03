@@ -21,7 +21,7 @@ apt-get install build-essential libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev 
 3) As per source instructions type in the following: 
 
 ```bash
-././autogen.sh    
+./autogen.sh    
 ./configure     # This checks your system configuration
 make            # This generates the Makefile for compilation    
 make install    # Make sure to run this with root privileges
