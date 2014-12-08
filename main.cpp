@@ -1,6 +1,6 @@
-#include <iostream>
-#include <SDL.h>
-#include <SDL2_gfxPrimitives.h>
+#include "iostream"
+#include "SDL.h"
+#include "SDL2_gfxPrimitives.h"
 
 
 
@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
 		roundedBoxColor(ren, 40, 40, 240, 240, 10, 0xFABCA0FF);
 		
 		SDL_RenderPresent(ren);
-		SDL_Delay(2000);
+		SDL_Delay(20);
 	}
 
 	//SDL_DestroyTexture(tex);

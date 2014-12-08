@@ -52,9 +52,10 @@ After getting it to run, you may add more stuff to it.
 
 19. Click Apply then ok.
 
-20. In the main.cpp file, add in the start:
-"#include <SDL.h>"
-"#include <SDL2_gfxPrimitives.h>."
+20. In the main.cpp file, add in the start (without the outer quotation marks):
+"#include "iostream""
+"#include "SDL.h""
+"#include "SDL2_gfxPrimitives.h""
 
 21. In main.cpp, look for the code "SDL_DestroyTexture(tex);" and then comment it out.
 
