@@ -1,6 +1,11 @@
 
 //http://wiki.libsdl.org/APIByCategory
 
+#include <iostream>
+#include <SDL.h>
+#include <SDL2_gfxPrimitives.h>
+#undef main
+
 int main() {
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
@@ -38,7 +43,7 @@ int main() {
 		SDL_Delay(2000);
 	}
 
-	SDL_DestroyTexture(tex);
+	//SDL_DestroyTexture(tex);
 	SDL_DestroyRenderer(ren);
 	SDL_DestroyWindow(win);
 	SDL_Quit();
