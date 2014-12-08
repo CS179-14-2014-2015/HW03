@@ -1,8 +1,6 @@
 #include <iostream>
 #include <SDL.h>
 #include <gfx/SDL2_gfxPrimitives.h>
-//http://wiki.libsdl.org/APIByCategory
-//whatever man just redirect to the /include and /lib paths.....
 
 int main(int argc, char* argv[]) {
 
