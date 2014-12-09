@@ -38,9 +38,9 @@ Assuming the problem had something to do with the differing versions again, deci
 Since the problem seemed to be coming from the fact that the SDL2_gfx folder didn't have a ```Makefile.mingw``` file unlike SDL_gfx, copied it from SDL_gfx to SDL2_gfx and edited the filenames within the file to match those in the SDL2_gfx folder.
 
 Added the ff includes:
-#include "SDL2/SDL.h"
+```#include "SDL2/SDL.h"
 #include "SDL2/SDL2_gfxPrimitives.h"
 #include <cstddef>
-#include <iostream>
+#include <iostream>```
 
 Compiled using the ff command: g++ main.cpp -lmingw32 -lSDL2_gfx -lSDL2main -lSDL2 -o main -std=c++11
