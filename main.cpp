@@ -1,7 +1,9 @@
+#include "SDL2/SDL.h"
+#include "SDL2/SDL2_gfxPrimitives.h"
+#include <cstddef>
+#include <iostream>
 
-//http://wiki.libsdl.org/APIByCategory
-
-int main() {
+int main(int argc, char *argv[]) {
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
 		std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
@@ -22,7 +24,10 @@ int main() {
 		SDL_Quit();
 		return 1;
 	}
-
+	
+	SDL_Surface *sur = SDL_CreateRGBSurface(0, 100, 100, 100, 0xff000000, 0x00ff0000, 0x0000ff00, 0x000000ff);
+	SDL_Texture *tex = SDL_CreateTextureFromSurface(ren, sur);
+	
 	bool running = true;
 
 	while (running) {
@@ -30,12 +35,13 @@ int main() {
 		while(SDL_PollEvent(&ev) != 0) {
 			if(ev.type == SDL_QUIT) running = false;
 		}
+		SDL_SetRenderDrawColor(ren, 255, 255, 0, 255);
 		SDL_RenderClear(ren);
-
+		
 		roundedBoxColor(ren, 40, 40, 240, 240, 10, 0xFABCA0FF);
 		
 		SDL_RenderPresent(ren);
-		SDL_Delay(2000);
+		SDL_Delay(100);
 	}
 
 	SDL_DestroyTexture(tex);
