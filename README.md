@@ -45,4 +45,4 @@ Added the ff includes:
 #include <iostream>
 ```
 
-Compiled using the ff command: g++ main.cpp -lmingw32 -lSDL2_gfx -lSDL2main -lSDL2 -o main -std=c++11
+Compiled using the ff command: ```g++ main.cpp -lmingw32 -lSDL2_gfx -lSDL2main -lSDL2 -o main -std=c++11```
