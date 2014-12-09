@@ -1,28 +1,5 @@
-//Downloaded MSys to use Unix commands
-
-// Referred to http://lemonlauncher.sourceforge.net/mingw for steps to install SDL 1.2 and SDL_gfx
-
-// Referred to http://stackoverflow.com/questions/15570768/sdl-gfx-2-0-24-dll-is-not-build-using-mingw to fix make error involving SDL_gfxPrimitives.h
-
-// Encountered lots of errors with SDL 1.2 and decided to change to 2.0
-
-// Copied all files in C:\Compilers\MSys\1.0\home\src\SDL2-2.0.3\i686-w64-mingw32 to C:\Compilers\MinGW
-
-// Referred to http://stackoverflow.com/questions/22446008/winapifamily-h-no-such-file-or-directory-when-compiling-sdl-in-codeblocks to fix make error involving SDL_platform
-
-// Initially used SDL_gfx, then switched to SDL2_gfx
-
-// Copied Makefile.mingw from SDL_gfx to SDL2_gfx and edited filename lists accordingly
-
-// Added the ff includes:
-#include "SDL2/SDL.h"
-#include "SDL2/SDL2_gfxPrimitives.h"
-#include <cstddef>
-#include <iostream>
-
-// Compile using the ff command: g++ main.cpp -lmingw32 -lSDL2_gfx -lSDL2main -lSDL2 -o main -std=c++11
-
 int main(int argc, char *argv[]) {
+
 	if (SDL_Init(SDL_INIT_EVERYTHING) != 0){
 		std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
 		return 1;

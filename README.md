@@ -1,7 +1,8 @@
 #HW03 Compile Me (deadline: 2014-12-09)
 ===
 
-Get `main.cpp` to compile and run.
+Get `main.cpp` to compile and run. Document how you got it to compile below.
+>>>>>>> 9584b812432ccec82bd484563a7f795582cf78b2
 
 The program uses the following libraries:
 
@@ -12,7 +13,7 @@ The program needs modifications to run (in particular, the `#include`s)
 
 After getting it to run, you may add more stuff to it.
 
-<hr>
+---
 
 Resources used:
 MinGW
